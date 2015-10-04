@@ -1,0 +1,10 @@
+web:
+  image: iojs:2.3.4
+  volumes:
+    - .:/app
+  working_dir: /app
+  ports:
+    - "9002:3000"
+  environment:
+    PORT: "3000"
+  command: "/bin/bash -c 'npm install && npm start'"
