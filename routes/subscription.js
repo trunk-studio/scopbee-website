@@ -12,41 +12,14 @@ router.post('/', function(req, res) {
 	var message = {
 		html: subscriptionEmail,
 		subject: '[KDH-WEB] New message from ',
-		to: 'william@trunk-studio.com'
+		to: 'kyle@trunk-studio.com'
 	};
-
 
 	server.mailer.send(message).then(function (result) {
 		console.log("sending mail... done");
 	});
 
-
 	res.json({});
-});
-
-(function() {
-
-  $( '#subscriptionForm' ).submit(function( event ) {
-    event.preventDefault();
-
-    var $form = $( this ), url = $form.attr( "action" );
-
-    var postData = {
-      email:   $form.find( "input[name='email']" ).val(),
-    };
-
-    var posting = $.post( url, postData );
-
-    posting.done(function( data ) {
-
-      $form.find( "input[name='email']" ).val( '' );
-
-      alert( "Your email are subscribe successful" );
-    });
-  });
-
-  $( "button[type='submit']", '#subscriptionForm').removeAttr('disabled');
-
 });
 
 module.exports = router;
