@@ -1,0 +1,3 @@
+**/*.log
+config/mail.js
+node_modules/

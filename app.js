@@ -9,6 +9,7 @@ var sailsMailer = require('sails-service-mailer');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var contact = require('./routes/contact');
+var subscription = require('./routes/subscription');
 var session = require('express-session');
 var flash = require('connect-flash');
 var app = express();
@@ -45,6 +46,7 @@ global.server = {
 //app.use('/', routes);
 //app.use('/users', users);
 app.use('/contact', contact);
+app.use('/subscription', subscription);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
