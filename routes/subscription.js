@@ -1,0 +1,27 @@
+var express = require('express');
+var router = express.Router();
+var util = require('util');
+var fs = require('fs');
+
+/* POST subscriptio mail. */
+router.post('/', function(req, res) {
+
+	console.log('=== POST subscription mail ===');
+	var subscriptionEmail   = req.body.email   || 'NO_EMAIL';
+
+	var message = {
+		html: subscriptionEmail,
+		subject: '[KDH-WEB] New message from ',
+		to: 'william@trunk-studio.com'
+	};
+
+
+	server.mailer.send(message).then(function (result) {
+		console.log("sending mail... done");
+	});
+
+
+	res.json({});
+});
+
+module.exports = router;
