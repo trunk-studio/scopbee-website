@@ -11,7 +11,7 @@ router.post('/', function(req, res) {
 
 	var message = {
 		html: subscriptionEmail,
-		subject: '[KDH-WEB] New message from ',
+		subject: '[SCOPBEE-360] New subscription message',
 		to: 'kyle@trunk-studio.com'
 	};
 

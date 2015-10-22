@@ -1,5 +1,4 @@
-(function() {
-
+$(function() {
   $( '#subscriptionForm' ).submit(function( event ) {
     event.preventDefault();
 

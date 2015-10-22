@@ -314,22 +314,22 @@
 		<div class="row">
 			<div class="col-sm-12 form">
 				<div id="contact">
+                    
+                    <form method="post" action="/subscription" name="subscriptionForm" id="subscriptionForm">
 
-				<form method="post" action="/subscription" name="subscriptionForm" id="subscriptionForm">
+                        <fieldset>
 
-					<fieldset>
+                            <label for="email" accesskey="E"></label>
+                            <input name="email" type="text" id="email" size="30" value="" placeholder="Please enter your email address" />
 
-						<label for="email" accesskey="E"></label>
-						<input name="email" type="text" id="email" size="30" value="" placeholder="Please enter your email address" />
+                            <button type="submit" class="submit btn btn-send" id="submit" value="Submit">
+                                <i class="fa fa-envelope"></i>
+                                Subscribe
+                            </button>
 
-						<button type="submit" class="submit btn btn-send" id="submit" value="Submit">
-							<i class="fa fa-envelope"></i>
-							Subscribe
-						</button>
+                        </fieldset>
 
-					</fieldset>
-
-				</form>
+                    </form>
 
 				<div class="tex-center">
 					<div id="message"></div>
